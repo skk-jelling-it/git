@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+
+// Global Components
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+
+// Custom navigation menu
+.navbar, .navbar-default {
+
+  background: none;
+  _background-color: lighten(@gray-lighter, 5%);
+  background-color: white;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 255, 0.275);
+
+  .container {
+
+    .navbar-header *, .navbar-collapse * {
+      transition: all 0.3s ease 0s;
+    }
+    
+    .navbar-header {
+
+
+      .navbar-brand {
+
+        _color: darken(@brand-text-color, 10%);
+        color: darken(@brand-text-color, 0%);
+        .script-font;
+        
+        &:hover {
+          color: darken(@brand-text-color, 12%);
+        }
+        
+      }
+
+    }
+    
+    .navbar-collapse, .collapse {
+
+      .navbar-nav, .nav {
+        
+        li {
+          
+          &:hover,
+          &:focus {
+            
+            a {
+
+              color: @nav-hover;
+              
+            }
+            
+          }
+          
+          &.active {
+
+            a {
+
+              background: none;
+              box-shadow: none;
+              
+              color: @nav-active;
+              font-weight: bold;
+              
+              _background-color: fadeout(@gray, 90%);
+              _background-color: fade(@gray, 15%);
+              background-color: fade(@placeholder-text, 15%);
+              
+              _box-shadow: 0px 0px 2px @gray;
+              
+            }
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+
+}
+
+
+// Custom sticky footer
+.footer {
+  background-color: white;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.15) inset, 0 -1px 5px rgba(0, 0, 255, 0.275);
+  padding: 4px 0px;
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+
+
+
