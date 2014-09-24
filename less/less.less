@@ -10,7 +10,7 @@ html {
 body {
   min-height: 100%;
   padding-top: 70px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 
@@ -50,6 +50,10 @@ body {
       .navbar-nav, .nav {
         
         li {
+          
+          a {
+            font-size: @navbar-link-font-size;
+          }
           
           &:hover,
           &:focus {
@@ -97,11 +101,18 @@ body {
 .footer {
   background-color: white;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.15) inset, 0 -1px 5px rgba(0, 0, 255, 0.275);
-  padding: 4px 0px;
+  line-height: 50px;
   bottom: 0;
-  height: 60px;
+  height: 50px;
   position: absolute;
   width: 100%;
+  font-size: @footer-font-size;
+  .centered;
+  
+  & p {
+    margin-bottom: 0px;
+  }
+  
 }
 
 
